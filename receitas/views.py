@@ -5,7 +5,7 @@ def index(request):
 
     receitas = Receita.objects.all()
 
-    dados = {
+    dados = { # vai trazer a receita
         'receitas' : receitas
     }
 
