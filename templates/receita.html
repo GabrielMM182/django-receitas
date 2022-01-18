@@ -7,52 +7,10 @@
         <img src="{% static 'img/core-img/hamburger.png' %}" alt="">
     </div>
 
-    <!-- Search Wrapper -->
-    <div class="search-wrapper">
-        <!-- Close Btn -->
-        <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+    {% include 'partials/_busca.html' %}
 
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <form action="{% url 'buscar' %}">
-                        <input
-                          type="text"
-                          name="buscar"
-                          placeholder="O que está procurando..."
-                        />
-                        <button type="submit">
-                          <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                      </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include 'partials/_header.html' %}
 
-    {% include 'partials/header.html' %}
-
-        <!-- Receipe Post Search -->
-        <div class="receipe-post-search mb-80">
-            <div class="container">
-                <form action="#" method="post">
-                    <div class="row">
-                        <div class="col-12 col-lg-5">
-                            <select name="select1" id="select1">
-                                <option value="1">Comida típica brasileira</option>
-                                <option value="1">Massas</option>
-                                <option value="1">Veganas</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-lg-2 text-right">
-                            <button type="submit" class="btn delicious-btn">Buscar</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- Receipe Slider -->
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -106,7 +64,7 @@
                 </div>
                 <!-- Ingredientes -->
 
-            {% include 'partials/footer.html' %}
+            {% include 'partials/_footer.html' %}
 
 
         {% endblock %}
